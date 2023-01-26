@@ -1,0 +1,104 @@
+dialog {
+    width: 30vw;
+    height: 40vh;
+    background-color: #0000ff;
+    padding: 1rem 0;
+    border-radius: 2rem;
+    border: none;
+    bottom: 15%;
+    animation: swing-in-top-fwd 2.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+@keyframes swing-in-top-fwd {
+    0% {
+        transform: rotateX(-100deg);
+        transform-origin: top;
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+        opacity: 1;
+    }
+}
+
+
+dialog>div {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+dialog>div>h2 {
+    margin-left: 28%;
+    margin-top: 5%;
+    font-size: 32px;
+    color: #0000ff;
+    font-weight: bold;
+
+}
+
+dialog>div>span {
+    margin-top: 2%;
+    margin-right: 3%;
+    background-color: rgba(95, 92, 92, 0.295);
+    height: 2%;
+    padding: 10px 12px;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+dialog>div>span:hover {
+    background-color: #0000ff;
+    color: white;
+    transition: 0.5s;
+}
+
+dialog>form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 25px;
+    height: 30vh;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+dialog>form>p {
+    color: #0000ff;
+    font-weight: bolder;
+}
+
+dialog>form>input {
+    padding: 10px;
+    border: none;
+    background-color: rgb(95, 92, 92, 0.295);
+    border-radius: 0.3rem;
+}
+
+#submitRegister {
+    background-color: #0000ff;
+    color: white;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+#submitRegister:hover {
+    background-color: rgba(163, 160, 160, 0.295);
+    color: #0000ff;
+    transition: 0.5s;
+}
+
+@keyframes text-focus-in {
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
